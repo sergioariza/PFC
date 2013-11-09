@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="advertenciaCoeficiente1" xml:space="preserve">
+    <value>WARNING: regression coefficient must be</value>
+  </data>
+  <data name="advertenciaCoeficiente2" xml:space="preserve">
+    <value>a positive integer greater than 1</value>
+  </data>
+  <data name="advertenciaDesplazamiento1" xml:space="preserve">
+    <value>WARNING: shift factor has to be an</value>
+  </data>
+  <data name="advertenciaDesplazamiento2" xml:space="preserve">
+    <value>integer number greater than zero and tenfold</value>
+  </data>
+  <data name="advertenciaNumero" xml:space="preserve">
+    <value>WARNING: it can only be a number</value>
+  </data>
+  <data name="advertenciaFilas1" xml:space="preserve">
+    <value>WARNING: if the value is zero, the program</value>
+  </data>
+  <data name="advertenciaFilas2" xml:space="preserve">
+    <value>will stop importing after 10 empty rows</value>
+  </data>
+  <data name="aumentarZoom" xml:space="preserve">
+    <value>Increase zoom</value>
+  </data>
+  <data name="azul" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="azulOscuro" xml:space="preserve">
+    <value>Dark blue</value>
+  </data>
+  <data name="coeficiente" xml:space="preserve">
+    <value>Coefficient</value>
+  </data>
+  <data name="coeficienteDeRegresion" xml:space="preserve">
+    <value>Regression coefficient:</value>
+  </data>
+  <data name="color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="coordenadaX" xml:space="preserve">
+    <value>Coordinate X =</value>
+  </data>
+  <data name="coordenadaY" xml:space="preserve">
+    <value>Coordinate Y =</value>
+  </data>
+  <data name="definicionEstandard" xml:space="preserve">
+    <value>Standard definition</value>
+  </data>
+  <data name="definicionFormal" xml:space="preserve">
+    <value>Formal definition</value>
+  </data>
+  <data name="desplazamiento" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="disminuirZoom" xml:space="preserve">
+    <value>Decrease zoom</value>
+  </data>
+  <data name="factorDeDesplazamiento" xml:space="preserve">
+    <value>Shift factor:</value>
+  </data>
+  <data name="Filas" xml:space="preserve">
+    <value>Number of rows to import</value>
+  </data>
+  <data name="gris" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="inicioNok" xml:space="preserve">
+    <value>Error: incorrect user or password</value>
+  </data>
+  <data name="inicioOk" xml:space="preserve">
+    <value>Login correct</value>
+  </data>
+  <data name="interpolacionPolinomica" xml:space="preserve">
+    <value>Polynomial interpolation</value>
+  </data>
+  <data name="introduzcaCoordenadaX" xml:space="preserve">
+    <value>Enter the X coordinates:</value>
+  </data>
+  <data name="introduzcaCoordenadaY" xml:space="preserve">
+    <value>Enter the Y coordinates:</value>
+  </data>
+  <data name="magenta" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="marron" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="naranja" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="negro" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="noHayFuncionesEnElHistorial" xml:space="preserve">
+    <value>(No functions in the history)</value>
+  </data>
+  <data name="noHayPuntosEnElHistorial" xml:space="preserve">
+    <value>(No points in the history)</value>
+  </data>
+  <data name="numeroDeFilas" xml:space="preserve">
+    <value>Number of rows:</value>
+  </data>
+  <data name="puntosMayuscula" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="regresionExponencial" xml:space="preserve">
+    <value>Exponential regression</value>
+  </data>
+  <data name="regresionLineal" xml:space="preserve">
+    <value>Lineal regression</value>
+  </data>
+  <data name="regresionLogaritmica" xml:space="preserve">
+    <value>Logarithmic regression</value>
+  </data>
+  <data name="regresionPolinomica" xml:space="preserve">
+    <value>Polynomial regression</value>
+  </data>
+  <data name="rojo" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="tamaño" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="tipoDeFuncion" xml:space="preserve">
+    <value>Function type</value>
+  </data>
+  <data name="verde" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="violeta" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="borrarFunciones" xml:space="preserve">
+    <value>Delete selected functions</value>
+  </data>
+  <data name="borrarPuntos" xml:space="preserve">
+    <value>Delete selected points</value>
+  </data>
+  <data name="importarFunciones" xml:space="preserve">
+    <value>Import selected functions</value>
+  </data>
+  <data name="importarPuntos" xml:space="preserve">
+    <value>Import selected points</value>
+  </data>
+  <data name="advertenciaCargarHistorialDeFunciones" xml:space="preserve">
+    <value>Are you sure? The functions you currently have stored will be erased</value>
+  </data>
+  <data name="advertenciaCargarHistorialDePuntos" xml:space="preserve">
+    <value>Are you sure? The points you currently have stored will be erased</value>
+  </data>
+  <data name="advertenciaCeldasZoom" xml:space="preserve">
+    <value>Warning: due to zoom, cells can not be displayed</value>
+  </data>
+  <data name="cargarHistorialDeFunciones" xml:space="preserve">
+    <value>Load functions history</value>
+  </data>
+  <data name="cargarHistorialDePuntos" xml:space="preserve">
+    <value>Load points history</value>
+  </data>
+  <data name="error001" xml:space="preserve">
+    <value>Error: the point is already in the history</value>
+  </data>
+  <data name="error002" xml:space="preserve">
+    <value>Error: firstly enter a function</value>
+  </data>
+  <data name="error003" xml:space="preserve">
+    <value>Error: function is already in the history</value>
+  </data>
+  <data name="error004" xml:space="preserve">
+    <value>Error: must be at least two points in the panel</value>
+  </data>
+  <data name="error005" xml:space="preserve">
+    <value>Error: select a type of approach before</value>
+  </data>
+  <data name="error006" xml:space="preserve">
+    <value>Error: not chosen any color</value>
+  </data>
+  <data name="error007" xml:space="preserve">
+    <value>Error: two or more images for the same origin. Function not injective</value>
+  </data>
+  <data name="error008" xml:space="preserve">
+    <value>Error: must be at least two points with the color selected in the panel</value>
+  </data>
+  <data name="error009" xml:space="preserve">
+    <value>Error: the exponential approach is not possible if the panel there is a point (Y axis) of less than or equal to zero</value>
+  </data>
+  <data name="error010" xml:space="preserve">
+    <value>Error: the logarithmic approximation is not possible if there is a point panel (X axis) of less than or equal to zero</value>
+  </data>
+  <data name="error011" xml:space="preserve">
+    <value>Error: coefficient must be a positive integer greater than one</value>
+  </data>
+  <data name="error012" xml:space="preserve">
+    <value>Error: there is already a point with that color</value>
+  </data>
+  <data name="error013a" xml:space="preserve">
+    <value>Error: line</value>
+  </data>
+  <data name="error013b" xml:space="preserve">
+    <value>from input file does not match to a function</value>
+  </data>
+  <data name="error014" xml:space="preserve">
+    <value>from input file does not match to a point</value>
+  </data>
+  <data name="error015" xml:space="preserve">
+    <value>Error: there is no functions to save</value>
+  </data>
+  <data name="error016" xml:space="preserve">
+    <value>Error: there is no functions to save in MenPas</value>
+  </data>
+  <data name="error017" xml:space="preserve">
+    <value>No se ha podido realizar la conexión con la plataforma MenPas. Contacte con el administrador</value>
+  </data>
+  <data name="error018" xml:space="preserve">
+    <value>Error recording functions in row</value>
+  </data>
+  <data name="error019" xml:space="preserve">
+    <value>Error: there is no points to save in MenPas</value>
+  </data>
+  <data name="error020" xml:space="preserve">
+    <value>Error recording points in row</value>
+  </data>
+  <data name="error021" xml:space="preserve">
+    <value>Error: there is no points to save</value>
+  </data>
+  <data name="error022a" xml:space="preserve">
+    <value>Error: the function "f(x)=</value>
+  </data>
+  <data name="error022b" xml:space="preserve">
+    <value>" is already in the hsitory</value>
+  </data>
+  <data name="evaluacionCorrectaDeFuncion" xml:space="preserve">
+    <value>Correct evaluation function</value>
+  </data>
+  <data name="evaluacionIncorrectaDeFuncion" xml:space="preserve">
+    <value>Incorrect evaluation function</value>
+  </data>
+  <data name="funciones" xml:space="preserve">
+    <value>functions successfully loaded</value>
+  </data>
+  <data name="funcionesGrabadasCorrectamente" xml:space="preserve">
+    <value>Functions successfully recorded</value>
+  </data>
+  <data name="historialDeFuncionesGuardadoCorrectamente" xml:space="preserve">
+    <value>History functions successfully saved</value>
+  </data>
+  <data name="historialDePuntosGuardadoCorrectamente" xml:space="preserve">
+    <value>Points functions successfully saved</value>
+  </data>
+  <data name="historialFunciones" xml:space="preserve">
+    <value>Functions history|*.txt</value>
+  </data>
+  <data name="historialPuntos" xml:space="preserve">
+    <value>Points history|*.txt</value>
+  </data>
+  <data name="puntoInsertadoEnCoordenada" xml:space="preserve">
+    <value>Inserted point in coodinate</value>
+  </data>
+  <data name="puntosGrabadosCorrectamente" xml:space="preserve">
+    <value>Points successfully recorded</value>
+  </data>
+  <data name="puntosMinuscula" xml:space="preserve">
+    <value>points</value>
+  </data>
+  <data name="seHanCargadoConExito" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="seleccionaUnHistorialDeFunciones" xml:space="preserve">
+    <value>Select a history functions</value>
+  </data>
+  <data name="seleccionaUnHistorialDePuntos" xml:space="preserve">
+    <value>Select a history points</value>
+  </data>
+  <data name="error023a" xml:space="preserve">
+    <value>Error: the point</value>
+  </data>
+  <data name="error023b" xml:space="preserve">
+    <value>is already in the history</value>
+  </data>
+  <data name="error024" xml:space="preserve">
+    <value>Error: you don't have enough privileges to delete selected functions</value>
+  </data>
+  <data name="error025" xml:space="preserve">
+    <value>Error deleting functions in row</value>
+  </data>
+  <data name="error026" xml:space="preserve">
+    <value>Error: you have not selected any function</value>
+  </data>
+  <data name="error027" xml:space="preserve">
+    <value>Error: you don't have enough privileges to delete selected points</value>
+  </data>
+  <data name="error028" xml:space="preserve">
+    <value>Error deleting points in row</value>
+  </data>
+  <data name="error029" xml:space="preserve">
+    <value>Error: you have not selected any point</value>
+  </data>
+  <data name="error030" xml:space="preserve">
+    <value>Error: more zoom is not possible</value>
+  </data>
+  <data name="funcionesBorradasCorrectamente" xml:space="preserve">
+    <value>Functions successfully deleted</value>
+  </data>
+  <data name="noSePuedeAumentarMasElZoom" xml:space="preserve">
+    <value>More zoom is not possible</value>
+  </data>
+  <data name="puntosBorradosCorrectamente" xml:space="preserve">
+    <value>Points successfully deleted</value>
+  </data>
+  <data name="error031" xml:space="preserve">
+    <value>Error: less zoom is not possible</value>
+  </data>
+  <data name="error032" xml:space="preserve">
+    <value>Error: displacement must be a positive integer greater than zero and a multiple of 10</value>
+  </data>
+  <data name="noSePuedeDisminuirMasElZoom" xml:space="preserve">
+    <value>Less zoom is not possible</value>
+  </data>
+  <data name="archivoJPG" xml:space="preserve">
+    <value>JPG file|*.jpg</value>
+  </data>
+  <data name="borrarPrimeraFuncionDelHistorial" xml:space="preserve">
+    <value>Delete first function from history</value>
+  </data>
+  <data name="borrarPrimerPuntoDelHistorial" xml:space="preserve">
+    <value>Delete first point from history</value>
+  </data>
+  <data name="borrarUltimaFuncionDelHistorial" xml:space="preserve">
+    <value>Delete last function from history</value>
+  </data>
+  <data name="borrarUltimoPuntoDelHistorial" xml:space="preserve">
+    <value>Delete last point from history</value>
+  </data>
+  <data name="error033" xml:space="preserve">
+    <value>Error: the point inserted in axis Y is not a number</value>
+  </data>
+  <data name="error034" xml:space="preserve">
+    <value>Error: the point inserted in axis X is not a number</value>
+  </data>
+  <data name="error035" xml:space="preserve">
+    <value>Error: you must insert a number in the X coordinate</value>
+  </data>
+  <data name="error036" xml:space="preserve">
+    <value>Error: you must insert a number in the Y coordinate</value>
+  </data>
+  <data name="error037a" xml:space="preserve">
+    <value>Error: the point inserted in axis X is not a coordinate</value>
+  </data>
+  <data name="error038a" xml:space="preserve">
+    <value>Error: column</value>
+  </data>
+  <data name="error038b" xml:space="preserve">
+    <value>is not a number. Import was cancelled</value>
+  </data>
+  <data name="error039" xml:space="preserve">
+    <value>Error: import error exist in function of column</value>
+  </data>
+  <data name="error040" xml:space="preserve">
+    <value>Error: the file must contain two or more points</value>
+  </data>
+  <data name="error041" xml:space="preserve">
+    <value>Error: row number must be a positive integer greater or equal than zero</value>
+  </data>
+  <data name="error042" xml:space="preserve">
+    <value>is not a point. Its format must be "(x, y)". This column will not be imported</value>
+  </data>
+  <data name="error043" xml:space="preserve">
+    <value>This column will not be imported</value>
+  </data>
+  <data name="error044" xml:space="preserve">
+    <value>is not a number. This column will not be imported</value>
+  </data>
+  <data name="error045" xml:space="preserve">
+    <value>Error: import error exist in cloud of column</value>
+  </data>
+  <data name="exportacionAWordCorrecta" xml:space="preserve">
+    <value>Export to Word correct</value>
+  </data>
+  <data name="fila" xml:space="preserve">
+    <value>row</value>
+  </data>
+  <data name="funcionDoc" xml:space="preserve">
+    <value>Function|*.doc</value>
+  </data>
+  <data name="guardarPanel" xml:space="preserve">
+    <value>Save panel</value>
+  </data>
+  <data name="hojaDeFunciones" xml:space="preserve">
+    <value>Excel functions|*.xlsx;*.xls</value>
+  </data>
+  <data name="importacionFuncionOK" xml:space="preserve">
+    <value>Import function performed correctly</value>
+  </data>
+  <data name="importarNubeDePuntos" xml:space="preserve">
+    <value>Import point clouds</value>
+  </data>
+  <data name="seHanImportado" xml:space="preserve">
+    <value>It have imported a total of</value>
+  </data>
+  <data name="seleccionaUnaHojaDeCalculo" xml:space="preserve">
+    <value>Select a spreadsheet to import</value>
+  </data>
+  <data name="seleccionaUnFicheroDoc" xml:space="preserve">
+    <value>Select a doc file to export</value>
+  </data>
+  <data name="coordenadas" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="error046" xml:space="preserve">
+    <value>Unable to release the object</value>
+  </data>
+  <data name="error047" xml:space="preserve">
+    <value>Error: two or more images for the same origin. Function not injective</value>
+  </data>
+  <data name="error048" xml:space="preserve">
+    <value>Error: must be at least two points with the color selected in the panel</value>
+  </data>
+  <data name="error049" xml:space="preserve">
+    <value>Error: select a type of approach before</value>
+  </data>
+  <data name="error050" xml:space="preserve">
+    <value>Error: the exponential approach is not possible if the panel there is a point (Y axis) of less than or equal to zero</value>
+  </data>
+  <data name="error051" xml:space="preserve">
+    <value>Error: the logarithmic approximation is not possible if there is a point panel (X axis) of less than or equal to zero</value>
+  </data>
+  <data name="error052a" xml:space="preserve">
+    <value>Error: existing point in column</value>
+  </data>
+  <data name="error052b" xml:space="preserve">
+    <value>with coordinates</value>
+  </data>
+  <data name="estadoDePrograma" xml:space="preserve">
+    <value>State program</value>
+  </data>
+  <data name="nubesDePuntos" xml:space="preserve">
+    <value>clouds of points</value>
+  </data>
+  <data name="seVaACancelarLaImportacion" xml:space="preserve">
+    <value>It will cancel the import</value>
+  </data>
+  <data name="error037b" xml:space="preserve">
+    <value>Error: the point inserted in axis Y is not a coordinate</value>
+  </data>
+  <data name="importarPuntosHoisan" xml:space="preserve">
+    <value>Import application points Hoisan</value>
+  </data>
+  <data name="importarPuntosBlandYAltman" xml:space="preserve">
+    <value>Import points from Bland and Altman</value>
+  </data>
+</root>

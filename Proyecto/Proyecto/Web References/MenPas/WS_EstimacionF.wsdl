@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EstaRegistrado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstaRegistradoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstaRegistradoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dame_perfil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dame_perfilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dame_perfilResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Obtener_grupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Obtener_grupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Obtener_grupoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarFuncion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarFuncionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarFuncionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarPunto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarPuntoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarPuntoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerFunciones">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerFuncionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerFuncionesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerPuntos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerPuntosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPuntosResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarFuncion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarFuncionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarFuncionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarPunto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarPuntoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarPuntoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerFuncionesDS">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerFuncionesDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerFuncionesDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPuntosDS">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerPuntosDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPuntosDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EstaRegistradoSoapIn">
+    <wsdl:part name="parameters" element="tns:EstaRegistrado" />
+  </wsdl:message>
+  <wsdl:message name="EstaRegistradoSoapOut">
+    <wsdl:part name="parameters" element="tns:EstaRegistradoResponse" />
+  </wsdl:message>
+  <wsdl:message name="dame_perfilSoapIn">
+    <wsdl:part name="parameters" element="tns:dame_perfil" />
+  </wsdl:message>
+  <wsdl:message name="dame_perfilSoapOut">
+    <wsdl:part name="parameters" element="tns:dame_perfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="Obtener_grupoSoapIn">
+    <wsdl:part name="parameters" element="tns:Obtener_grupo" />
+  </wsdl:message>
+  <wsdl:message name="Obtener_grupoSoapOut">
+    <wsdl:part name="parameters" element="tns:Obtener_grupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFuncionSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarFuncion" />
+  </wsdl:message>
+  <wsdl:message name="InsertarFuncionSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarFuncionResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarPuntoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarPunto" />
+  </wsdl:message>
+  <wsdl:message name="InsertarPuntoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarPuntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerFuncionesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerFunciones" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerFuncionesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerFuncionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPuntosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPuntos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPuntosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarFuncionSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarFuncion" />
+  </wsdl:message>
+  <wsdl:message name="BorrarFuncionSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarFuncionResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarPuntoSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarPunto" />
+  </wsdl:message>
+  <wsdl:message name="BorrarPuntoSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarPuntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerFuncionesDSSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerFuncionesDS" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerFuncionesDSSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerFuncionesDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPuntosDSSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPuntosDS" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPuntosDSSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPuntosDSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_EstimacionFSoap">
+    <wsdl:operation name="EstaRegistrado">
+      <wsdl:input message="tns:EstaRegistradoSoapIn" />
+      <wsdl:output message="tns:EstaRegistradoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dame_perfil">
+      <wsdl:input message="tns:dame_perfilSoapIn" />
+      <wsdl:output message="tns:dame_perfilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_grupo">
+      <wsdl:input message="tns:Obtener_grupoSoapIn" />
+      <wsdl:output message="tns:Obtener_grupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFuncion">
+      <wsdl:input message="tns:InsertarFuncionSoapIn" />
+      <wsdl:output message="tns:InsertarFuncionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPunto">
+      <wsdl:input message="tns:InsertarPuntoSoapIn" />
+      <wsdl:output message="tns:InsertarPuntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFunciones">
+      <wsdl:input message="tns:ObtenerFuncionesSoapIn" />
+      <wsdl:output message="tns:ObtenerFuncionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntos">
+      <wsdl:input message="tns:ObtenerPuntosSoapIn" />
+      <wsdl:output message="tns:ObtenerPuntosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarFuncion">
+      <wsdl:input message="tns:BorrarFuncionSoapIn" />
+      <wsdl:output message="tns:BorrarFuncionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPunto">
+      <wsdl:input message="tns:BorrarPuntoSoapIn" />
+      <wsdl:output message="tns:BorrarPuntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFuncionesDS">
+      <wsdl:input message="tns:ObtenerFuncionesDSSoapIn" />
+      <wsdl:output message="tns:ObtenerFuncionesDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntosDS">
+      <wsdl:input message="tns:ObtenerPuntosDSSoapIn" />
+      <wsdl:output message="tns:ObtenerPuntosDSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_EstimacionFSoap" type="tns:WS_EstimacionFSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstaRegistrado">
+      <soap:operation soapAction="http://tempuri.org/EstaRegistrado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dame_perfil">
+      <soap:operation soapAction="http://tempuri.org/dame_perfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_grupo">
+      <soap:operation soapAction="http://tempuri.org/Obtener_grupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFuncion">
+      <soap:operation soapAction="http://tempuri.org/InsertarFuncion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPunto">
+      <soap:operation soapAction="http://tempuri.org/InsertarPunto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFunciones">
+      <soap:operation soapAction="http://tempuri.org/ObtenerFunciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntos">
+      <soap:operation soapAction="http://tempuri.org/ObtenerPuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarFuncion">
+      <soap:operation soapAction="http://tempuri.org/BorrarFuncion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPunto">
+      <soap:operation soapAction="http://tempuri.org/BorrarPunto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFuncionesDS">
+      <soap:operation soapAction="http://tempuri.org/ObtenerFuncionesDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntosDS">
+      <soap:operation soapAction="http://tempuri.org/ObtenerPuntosDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_EstimacionFSoap12" type="tns:WS_EstimacionFSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstaRegistrado">
+      <soap12:operation soapAction="http://tempuri.org/EstaRegistrado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dame_perfil">
+      <soap12:operation soapAction="http://tempuri.org/dame_perfil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_grupo">
+      <soap12:operation soapAction="http://tempuri.org/Obtener_grupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarFuncion">
+      <soap12:operation soapAction="http://tempuri.org/InsertarFuncion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPunto">
+      <soap12:operation soapAction="http://tempuri.org/InsertarPunto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFunciones">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerFunciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntos">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerPuntos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarFuncion">
+      <soap12:operation soapAction="http://tempuri.org/BorrarFuncion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPunto">
+      <soap12:operation soapAction="http://tempuri.org/BorrarPunto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFuncionesDS">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerFuncionesDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntosDS">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerPuntosDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_EstimacionF">
+    <wsdl:port name="WS_EstimacionFSoap" binding="tns:WS_EstimacionFSoap">
+      <soap:address location="http://svf.espaciowww.net/WS_EstimacionF.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_EstimacionFSoap12" binding="tns:WS_EstimacionFSoap12">
+      <soap12:address location="http://svf.espaciowww.net/WS_EstimacionF.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
